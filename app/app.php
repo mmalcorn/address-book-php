@@ -11,5 +11,9 @@
         $_SESSION['contact-list'] = array();
       }
 
+    $app->get("/", function() use ($app){
+      return $app['twig']->render('address_book_home.html.twig');
+    }
+
     return $app
  ?>
