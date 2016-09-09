@@ -34,6 +34,18 @@
     function setAddress($new_address){
       $this->address = $new_address;
     }
+
+    function save(){
+      array_push($_SESSION['contact_list'], $this);
+    }
+
+    static function getAll(){
+      return $_SESSION['contact_list'];
+    }
+
+    static function deleteAll(){
+      return $_SESSSION['contact_list'] = array();
+    }
 }
 
 
