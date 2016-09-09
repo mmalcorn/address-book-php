@@ -14,13 +14,13 @@
       }
 
     $app->get("/", function() use ($app){
-      return $app['twig']->render('address_book_home.html.twig');
+      return $app['twig']->render('address_book_home.html.twig', array('contact-list'=> Contact::getAll()));
     });
 
     $app->post("/contacts", function() use ($app){
-      $name = new Contact($_POST['contact-name']);
+      $name = new Contact($_POST['name']);
       $name->save();
-      return $app['twig']->render('contacts.html.twig', array('contact-name' => $name));
+      return $app['twig']->render('contacts.html.twig', array('contact-list'=> Contact::getAll()));
     });
 
     return $app;
