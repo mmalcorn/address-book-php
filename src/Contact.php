@@ -1,49 +1,49 @@
 <?php
-  Class Contact {
+  class Contact {
     private $name;
     private $phone_number;
     private $address;
 
-    function __construct($name, $phone_number, $address){
-      $this-> (string) name;
-      $this-> (string) phone_number;
-      $this-> (string) address;
+    function __construct($contact_name, $contact_number, $contact_address){
+      $this->name = (string) $contact_name;
+      $this->phone_number = $contact_number;
+      $this->address = $contact_address;
     }
 
     function getName(){
-      $this->name;
+      return $this->name;
     }
 
-    function setName($new_name){
-      $this->name = $new_name;
+    function setName($contact_name){
+      $this->name = $contact_name;
     }
 
     function getNumber(){
-      $this->phone_number;
+      return $this->phone_number;
     }
 
-    function setNumber($new_number){
-      $this->phone_number = $new_number;
+    function setNumber($contact_number){
+      $this->phone_number = $contact_number;
     }
 
     function getAddress(){
-      $this->address;
+      return $this->address;
     }
 
-    function setAddress($new_address){
-      $this->address = $new_address;
+    function setAddress($contact_address){
+      $this->address = $contact_address;
     }
 
     function save(){
-      array_push($_SESSION['contact-list'], $this);
+      array_push($_SESSION["contact_list"], $this);
     }
 
     static function getAll(){
-      return $_SESSION['contact-list'];
+      return $_SESSION["contact_list"];
     }
 
     static function deleteAll(){
-      return $_SESSSION['contact-list'] = array();
+      return $_SESSSION["contact_list"] = array();
     }
 }
 

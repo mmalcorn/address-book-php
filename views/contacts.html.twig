@@ -1,14 +1,11 @@
 <html>
   <head>
-    <title></title>
+    <title>Contacts</title>
   </head>
     <body>
-      {% if contact is not empty %}
-        {% for contact in contact-list %}
-        <li> <h3>{{contact.getName}} </h3> </li>
-        {% endfor %}
-      {% endif %}
-        <form action='/' method='get'>
+      <h3>List of contacts:</h3>
+          <h2> {{add_contact.getName}} </h2>
+        <form action="/" type="get">
         <button type="submit">Back</button>
       </form>
     </body>
