@@ -43,7 +43,7 @@
     }
 
     static function deleteAll(){
-      return $_SESSSION["contact_list"] = array();
+      return $_SESSION["contact_list"] = array();
     }
 }
 

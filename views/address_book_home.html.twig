@@ -6,10 +6,10 @@
   <body>
     {% if contact_list is not empty %}
     <h2>Contacts:</h2>
-      {% for contact in contact_list %}
-      <ul>
-        <li> {{ contact.getName }} </li>
-      </ul>
+    {% for contact in contact_list %}
+      <ol>
+       <li>{{ contact.getName }} </li>
+      </ol>
       {% endfor %}
     {% endif %}
   <div class="container">
@@ -18,6 +18,10 @@
         <label for="name">Name</label>
         <input id="name" name="name" type="text">
       <button type="submit">Add</button>
+      </form>
+
+      <form action="/remove_contacts" method="post">
+      <button type="submit">Delete All Contacts</button>
       </form>
 
   </div>

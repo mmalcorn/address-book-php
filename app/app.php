@@ -13,13 +13,18 @@
       ));
 
     $app->get("/", function() use ($app){
-      return $app["twig"]->render("address_book_home.html.twig", array("contact_list"=>Contact::getAll));
+      return $app["twig"]->render("address_book_home.html.twig", array("contact_list"=>Contact::getAll()));
     });
 
     $app->post("/contacts", function() use ($app){
       $contact = new Contact($_POST["name"], $_POST["phone_number"], $_POST["address"]);
       $contact->save();
       return $app["twig"]->render("contacts.html.twig", array("add_contact"=>$contact));
+    });
+
+    $app->post("/remove_contacts", function() use ($app){
+      Contact::deleteAll();
+      return $app["twig"]->render("delete_contact.html.twig");
     });
 
     return $app;
