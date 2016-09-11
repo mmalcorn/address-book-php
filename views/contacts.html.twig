@@ -1,10 +1,17 @@
 <html>
   <head>
     <title>Contacts</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
     <body>
-      <h3>List of contacts:</h3>
-          <h2> {{add_contact.getName}} </h2>
+      <div class="container">
+      <h2>Contact Added:</h2>
+          <h3> <ul><li>{{add_contact.getName}}</li></ul> </h3>
+          <p><h5>Phone Number:</h5>
+            {{add_contact.getNumber}}</p>
+          <p><h5>Address:</h5>
+            {{add_contact.getAddress}}</p>
+      </div>s
         <form action="/" type="get">
         <button type="submit">Back</button>
       </form>
