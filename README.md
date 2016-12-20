@@ -6,8 +6,9 @@ A basic address book application made using PHP that allows a person to store co
 
 ## Specifications
 
-#### 1. A user enters a first name, last name, phone number, address, city, and state.
-    * Input:
+#### A user enters a first name, last name, phone number, address, city, and state.
+    Input:
+    
     First Name: Meredith
     Last Name: Alcorn
     Phone Number: 609-000-0000
@@ -16,7 +17,7 @@ A basic address book application made using PHP that allows a person to store co
     State: Maryland
 
 * Example Output:
-    Redirected to the URL /contacts
+#### Redirected to the URL /contacts
     'Contact Added'
     Meredith Alcorn
     456 North Crab Dr.
