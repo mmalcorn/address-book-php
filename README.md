@@ -8,19 +8,19 @@ A basic address book application made using PHP that allows a person to store co
 
 #### A user enters a first name, last name, phone number, address, city, and state.
 * Input
-    First Name: Meredith
-    Last Name: Alcorn
-    Phone Number: 609-000-0000
-    Address: 456 North Crab Dr.
-    City: Baltimore
-    State: Maryland
+##### First Name: Meredith
+##### Last Name: Alcorn
+##### Phone Number: 609-000-0000
+##### Address: 456 North Crab Dr.
+##### City: Baltimore
+##### State: Maryland
 
 * Output:
 #### Redirected to the URL /contacts
-    'Contact Added'
-    Meredith Alcorn
-    456 North Crab Dr.
-    Baltimore, MD
+##### 'Contact Added'
+##### Meredith Alcorn
+##### 456 North Crab Dr.
+##### Baltimore, MD
 
 ## Setup/Installation Requirements
 
