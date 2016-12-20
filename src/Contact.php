@@ -3,11 +3,15 @@
     private $name;
     private $phone_number;
     private $address;
+    private $city;
+    private $state;
 
-    function __construct($contact_name, $contact_number, $contact_address){
+    function __construct($contact_name, $contact_number, $contact_address, $contact_city, $contact_state){
       $this->name = (string) $contact_name;
       $this->phone_number = $contact_number;
       $this->address = $contact_address;
+      $this->city = (string) $contact_city;
+      $this->state = $contact_state;
     }
 
     function getName(){
@@ -33,6 +37,23 @@
     function setAddress($contact_address){
       $this->address = $contact_address;
     }
+
+    function getCity(){
+      return $this->city;
+    }
+
+    function setCity($contact_city){
+      $this->city= $contact_city;
+    }
+
+    function getState(){
+      return $this->state;
+    }
+
+    function setState($contact_state){
+      $this->state = $contact_state;
+    }
+
 
     function save(){
       array_push($_SESSION["contact_list"], $this);
